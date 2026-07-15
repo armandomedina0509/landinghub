@@ -79,7 +79,7 @@ export function ContactForm() {
                 name="tipo"
                 required
                 defaultValue=""
-                className="rounded-xl border border-[var(--color-border)] bg-[var(--color-bg)] px-4 py-3 text-sm text-[var(--color-ink)] outline-none transition-colors focus:border-[var(--color-primary)]"
+                className="rounded-xl border border-[var(--color-border)] bg-[var(--color-surface-muted)] px-4 py-3 text-sm text-[var(--color-ink)] outline-none transition-colors focus:border-[var(--color-primary)]"
               >
                 <option value="" disabled>
                   Selecciona una opción
@@ -98,7 +98,7 @@ export function ContactForm() {
                 name="mensaje"
                 rows={4}
                 placeholder="Cuéntanos un poco más sobre lo que necesitas"
-                className="resize-none rounded-xl border border-[var(--color-border)] bg-[var(--color-bg)] px-4 py-3 text-sm text-[var(--color-ink)] outline-none transition-colors focus:border-[var(--color-primary)]"
+                className="resize-none rounded-xl border border-[var(--color-border)] bg-[var(--color-surface-muted)] px-4 py-3 text-sm text-[var(--color-ink)] outline-none transition-colors focus:border-[var(--color-primary)]"
               />
             </label>
 
@@ -151,7 +151,7 @@ function Field({
         name={name}
         placeholder={placeholder}
         required={required}
-        className="rounded-xl border border-[var(--color-border)] bg-[var(--color-bg)] px-4 py-3 text-sm text-[var(--color-ink)] outline-none transition-colors focus:border-[var(--color-primary)]"
+        className="rounded-xl border border-[var(--color-border)] bg-[var(--color-surface-muted)] px-4 py-3 text-sm text-[var(--color-ink)] outline-none transition-colors focus:border-[var(--color-primary)]"
       />
     </label>
   );
