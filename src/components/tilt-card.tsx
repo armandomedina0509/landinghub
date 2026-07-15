@@ -1,9 +1,15 @@
 "use client";
 
-import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
+import { motion, useMotionValue, useTransform } from "framer-motion";
 import { ReactNode, useRef } from "react";
 import { cn } from "@/lib/utils";
 
+// Nota: evitamos combinar rotación 3D (rotateX/rotateY) con
+// overflow-hidden + bordes redondeados en el mismo elemento: esa
+// combinación es un bug conocido de renderizado en varios navegadores
+// y puede hacer que el contenido desaparezca. En su lugar usamos un
+// brillo que sigue el cursor (glare) + elevación 2D, que es igual de
+// premium pero seguro en cualquier navegador/dispositivo.
 export function TiltCard({
   children,
   className,
@@ -15,9 +21,6 @@ export function TiltCard({
   const x = useMotionValue(0.5);
   const y = useMotionValue(0.5);
 
-  const springConfig = { stiffness: 220, damping: 22, mass: 0.4 };
-  const rotateX = useSpring(useTransform(y, [0, 1], [7, -7]), springConfig);
-  const rotateY = useSpring(useTransform(x, [0, 1], [-8, 8]), springConfig);
   const glareX = useTransform(x, [0, 1], ["0%", "100%"]);
   const glareY = useTransform(y, [0, 1], ["0%", "100%"]);
 
@@ -38,14 +41,15 @@ export function TiltCard({
       ref={ref}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      style={{ rotateX, rotateY, transformPerspective: 900 }}
-      className={cn("relative [transform-style:preserve-3d]", className)}
+      whileHover={{ y: -4 }}
+      transition={{ type: "spring", stiffness: 300, damping: 24 }}
+      className={cn("relative", className)}
     >
       {children}
       <motion.div
         aria-hidden
         style={{
-          background: `radial-gradient(320px circle at ${glareX} ${glareY}, rgba(255,255,255,0.16), transparent 60%)`,
+          background: `radial-gradient(320px circle at ${glareX} ${glareY}, rgba(255,255,255,0.14), transparent 60%)`,
         }}
         className="pointer-events-none absolute inset-0 z-10 rounded-[inherit] opacity-0 transition-opacity duration-300 group-hover:opacity-100"
       />

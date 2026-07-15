@@ -156,10 +156,7 @@ export function Demos() {
             >
               <TiltCard className="overflow-hidden rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] shadow-[0_1px_0_rgba(0,0,0,0.02)] transition-shadow duration-300 hover:shadow-[0_24px_60px_-24px_rgba(37,99,235,0.4)]">
                 {/* Mini website preview */}
-                <div
-                  className="relative overflow-hidden bg-gradient-to-br from-[var(--color-secondary)] via-[#132038] to-[var(--color-primary)]"
-                  style={{ transform: "translateZ(20px)" }}
-                >
+                <div className="relative overflow-hidden bg-gradient-to-br from-[var(--color-secondary)] via-[#132038] to-[var(--color-primary)]">
                   <div className="grid-fade absolute inset-0 opacity-25" />
 
                   {/* fake browser chrome */}
