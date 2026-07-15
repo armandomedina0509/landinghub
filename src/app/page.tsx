@@ -12,10 +12,12 @@ import { FinalCTA } from "@/components/final-cta";
 import { ContactForm } from "@/components/contact-form";
 import { Footer } from "@/components/footer";
 import { WhatsAppButton } from "@/components/whatsapp-button";
+import { ScrollProgress } from "@/components/scroll-progress";
 
 export default function Home() {
   return (
     <>
+      <ScrollProgress />
       <Navbar />
       <main>
         <Hero />

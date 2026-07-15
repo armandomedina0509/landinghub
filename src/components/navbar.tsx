@@ -38,8 +38,8 @@ export function Navbar() {
             : "mt-0 border border-transparent bg-transparent"
         }`}
       >
-        <a href="#top" className="flex items-center gap-2 font-display text-lg font-semibold text-[var(--color-ink)]">
-          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-accent)] text-white">
+        <a href="#top" className="group flex items-center gap-2 font-display text-lg font-semibold text-[var(--color-ink)]">
+          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-accent)] text-white transition-transform duration-500 group-hover:rotate-[20deg]">
             <Sparkles className="h-4 w-4" />
           </span>
           {siteConfig.name}
@@ -50,9 +50,10 @@ export function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-[var(--color-ink-muted)] transition-colors hover:text-[var(--color-ink)]"
+              className="group relative text-sm font-medium text-[var(--color-ink-muted)] transition-colors hover:text-[var(--color-ink)]"
             >
               {link.label}
+              <span className="absolute -bottom-1 left-0 h-px w-0 bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-accent)] transition-all duration-300 group-hover:w-full" />
             </a>
           ))}
         </nav>

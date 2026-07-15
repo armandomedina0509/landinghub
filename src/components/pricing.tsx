@@ -10,12 +10,13 @@ const plans = [
     description: "Landing profesional para empezar con el pie derecho.",
     features: [
       "Landing profesional",
+      "Hosting",
+      "Dominio",
       "SSL",
       "Hasta 5 secciones",
       "Formulario de contacto",
       "WhatsApp",
       "Soporte",
-      "Google Maps",
     ],
     cta: "Comenzar",
     highlight: false,
@@ -27,13 +28,29 @@ const plans = [
     features: [
       "Todo lo de Starter",
       "SEO",
+      "Google Analytics",
+      "Meta Pixel",
+      "Google Maps",
       "Hasta 8 secciones",
-      "Hosting",
-      "Dominio",
       "1 actualización mensual",
     ],
     cta: "Elegir Plan",
     highlight: true,
+  },
+  {
+    name: "Growth",
+    price: "1,299",
+    description: "Todo incluido para negocios enfocados en conversión.",
+    features: [
+      "Todo lo de Business",
+      "Copywriting profesional",
+      "Optimización de conversiones",
+      "Hasta 4 actualizaciones",
+      "Soporte prioritario",
+      "Reporte mensual",
+    ],
+    cta: "Impulsar mi Negocio",
+    highlight: false,
   },
 ];
 
@@ -52,17 +69,26 @@ export function Pricing() {
             <Reveal key={plan.name} delay={i * 0.1}>
               <div
                 className={cn(
-                  "relative flex h-full flex-col rounded-3xl border p-8 transition-transform hover:-translate-y-1",
+                  "group relative flex h-full flex-col rounded-3xl border p-8 transition-all duration-300 hover:-translate-y-1.5",
                   plan.highlight
-                    ? "border-[var(--color-primary)] bg-gradient-to-b from-[var(--color-primary)]/[0.06] to-transparent shadow-[0_30px_70px_-30px_rgba(37,99,235,0.45)]"
-                    : "border-[var(--color-border)] bg-[var(--color-surface)]"
+                    ? "border-[var(--color-primary)] bg-gradient-to-b from-[var(--color-primary)]/[0.06] to-transparent shadow-[0_30px_70px_-30px_rgba(37,99,235,0.45)] hover:shadow-[0_40px_90px_-30px_rgba(37,99,235,0.55)]"
+                    : "border-[var(--color-border)] bg-[var(--color-surface)] hover:border-[var(--color-primary)]/40 hover:shadow-[0_24px_60px_-30px_rgba(37,99,235,0.3)]"
                 )}
               >
                 {plan.highlight ? (
-                  <span className="absolute -top-3 left-8 flex items-center gap-1 rounded-full bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-accent)] px-3 py-1 text-xs font-semibold text-white">
-                    <Star className="h-3 w-3 fill-white" />
-                    Más Popular
-                  </span>
+                  <>
+                    <div
+                      aria-hidden
+                      className="pointer-events-none absolute -inset-px -z-10 rounded-3xl bg-gradient-to-r from-[var(--color-primary)] via-[var(--color-accent)] to-[var(--color-primary)] opacity-20 blur-xl [animation:pulse_4s_ease-in-out_infinite]"
+                    />
+                    <span
+                      className="absolute -top-3 left-8 flex items-center gap-1 rounded-full bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-accent)] px-3 py-1 text-xs font-semibold text-white"
+                      style={{ animation: "float 5s ease-in-out infinite" }}
+                    >
+                      <Star className="h-3 w-3 fill-white" />
+                      Más Popular
+                    </span>
+                  </>
                 ) : null}
 
                 <h3 className="font-display text-lg font-semibold text-[var(--color-ink)]">
