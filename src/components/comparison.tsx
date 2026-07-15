@@ -6,8 +6,8 @@ import { cn } from "@/lib/utils";
 type Cell = string | boolean;
 
 const rows: { label: string; freelance: Cell; agency: Cell; landinghub: Cell }[] = [
-  { label: "Costo inicial", freelance: "$8,000 – $25,000", agency: "$20,000 – $80,000", landinghub: "$0" },
-  { label: "Tiempo de entrega", freelance: "3–6 semanas", agency: "6–12 semanas", landinghub: "48 horas" },
+  { label: "Costo inicial", freelance: "$8,000 – $25,000", agency: "$20,000 – $80,000", landinghub: "$499" },
+  { label: "Tiempo de entrega", freelance: "3–6 semanas", agency: "6–12 semanas", landinghub: "7 Dias" },
   { label: "Soporte continuo", freelance: false, agency: "Con costo extra", landinghub: true },
   { label: "Hosting incluido", freelance: false, agency: false, landinghub: true },
   { label: "Dominio incluido", freelance: false, agency: false, landinghub: true },
