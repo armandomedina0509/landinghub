@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --color-primary: #2563eb;
+  --color-primary-600: #1d4ed8;
+  --color-secondary: #0f172a;
+  --color-accent: #38bdf8;
+  --color-bg: #ffffff;
+  --color-bg-dark: #020617;
+
+  --color-surface: #ffffff;
+  --color-surface-muted: #f8fafc;
+  --color-border: #e2e8f0;
+  --color-ink: #0f172a;
+  --color-ink-muted: #475569;
+}
+
+.dark {
+  --color-surface: #0b1222;
+  --color-surface-muted: #0f172a;
+  --color-border: rgba(148, 163, 184, 0.16);
+  --color-ink: #f1f5f9;
+  --color-ink-muted: #94a3b8;
+}
+
+@theme inline {
+  --color-primary: var(--color-primary);
+  --color-primary-600: var(--color-primary-600);
+  --color-secondary: var(--color-secondary);
+  --color-accent: var(--color-accent);
+  --color-surface: var(--color-surface);
+  --color-surface-muted: var(--color-surface-muted);
+  --color-border: var(--color-border);
+  --color-ink: var(--color-ink);
+  --color-ink-muted: var(--color-ink-muted);
+
+  --font-display: var(--font-space-grotesk);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-jetbrains-mono);
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-float-slow: float 9s ease-in-out infinite;
+  --animate-marquee: marquee 32s linear infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(var(--tw-rotate, 0deg));
+  }
+  50% {
+    transform: translateY(-14px) rotate(var(--tw-rotate, 0deg));
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+.dark body {
+  background: var(--color-bg-dark);
+}
+
+::selection {
+  background: var(--color-accent);
+  color: #012133;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+.grid-fade {
+  background-image: linear-gradient(to right, rgba(148, 163, 184, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(148, 163, 184, 0.08) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 0%, black 40%, transparent 100%);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
