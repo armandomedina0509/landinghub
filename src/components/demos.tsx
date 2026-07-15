@@ -16,17 +16,21 @@ import {
   Scissors,
   Coffee,
   ArrowUpRight,
+  ImageOff,
 } from "lucide-react";
 import { SectionHeading } from "./section-heading";
 import { Reveal } from "./reveal";
 import { TiltCard } from "./tilt-card";
 
+// Para cada demo: coloca tu imagen en /public/demos/ y pon aquí el nombre
+// del archivo en "image" (ej. "/demos/titan-fitness.jpg"). Si lo dejas en
+// "", se muestra automáticamente un fondo con ícono en su lugar.
 const demos = [
   {
     name: "Titan Fitness Center",
     category: "Gym",
     icon: Dumbbell,
-    headline: "Entrena sin límites",
+    image: "C:\Users\OFICINA\Documents\PROYECTOS\landinghub\public\demos\titan-fitness.png",
     // TODO: reemplaza con la URL pública real (la que diste es el panel de Netlify, no el sitio).
     url: "https://titan-fitness-hour.netlify.app/",
   },
@@ -34,77 +38,21 @@ const demos = [
     name: "La Parrilla Urbana",
     category: "Restaurante",
     icon: UtensilsCrossed,
-    headline: "Sabor que se reserva",
+    image: "C:\Users\OFICINA\Documents\PROYECTOS\landinghub\public\demos\parrilla-urbana.png",
     url: "https://parrillaurbana.netlify.app/",
   },
   {
     name: "Centro Médico Vida Sana",
     category: "Clínica",
     icon: HeartPulse,
-    headline: "Tu salud, sin filas",
+    image: "",
     url: "https://centro-medico-especialidades.netlify.app/",
-  },
-  {
-    name: "Huellitas Vet",
-    category: "Veterinaria",
-    icon: PawPrint,
-    headline: "Cuidamos a tu mejor amigo",
-    url: "",
-  },
-  {
-    name: "Estructura & Obra",
-    category: "Ingeniería",
-    icon: HardHat,
-    headline: "Proyectos que sí se entregan",
-    url: "",
-  },
-  {
-    name: "Hotel Meridiano",
-    category: "Hotel",
-    icon: BedDouble,
-    headline: "Descansa con vista",
-    url: "",
-  },
-  {
-    name: "Sonrisa Dental",
-    category: "Dentista",
-    icon: Sparkles,
-    headline: "Sonríe con confianza",
-    url: "",
-  },
-  {
-    name: "Instituto Progreso",
-    category: "Escuela",
-    icon: GraduationCap,
-    headline: "Educación que transforma",
-    url: "",
-  },
-  {
-    name: "Grupo Constructor MX",
-    category: "Constructora",
-    icon: Building2,
-    headline: "Construimos tu visión",
-    url: "",
-  },
-  {
-    name: "Casa Nueva Inmobiliaria",
-    category: "Inmobiliaria",
-    icon: Home,
-    headline: "Tu próximo hogar te espera",
-    url: "",
-  },
-  {
-    name: "Barbería del Barrio",
-    category: "Barbería",
-    icon: Scissors,
-    headline: "Estilo con tradición",
-    url: "",
   },
   {
     name: "Café Aroma",
     category: "Cafetería",
     icon: Coffee,
-    headline: "Cada taza, una pausa",
+    image: "C:\Users\OFICINA\Documents\PROYECTOS\landinghub\public\demos\cafe-aroma.png",
     url: "https://cafe-aroma19-06.netlify.app/",
   },
 ];
@@ -155,40 +103,28 @@ export function Demos() {
               className="group"
             >
               <TiltCard className="overflow-hidden rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] shadow-[0_1px_0_rgba(0,0,0,0.02)] transition-shadow duration-300 hover:shadow-[0_24px_60px_-24px_rgba(37,99,235,0.4)]">
-                {/* Mini website preview */}
-                <div className="relative overflow-hidden bg-gradient-to-br from-[var(--color-secondary)] via-[#132038] to-[var(--color-primary)]">
-                  <div className="grid-fade absolute inset-0 opacity-25" />
-
-                  {/* fake browser chrome */}
-                  <div className="relative flex items-center gap-1.5 border-b border-white/10 bg-black/10 px-3 py-2">
-                    <span className="h-1.5 w-1.5 rounded-full bg-white/30" />
-                    <span className="h-1.5 w-1.5 rounded-full bg-white/30" />
-                    <span className="h-1.5 w-1.5 rounded-full bg-white/30" />
-                    <span className="ml-2 truncate rounded-full bg-white/10 px-2 py-0.5 font-mono text-[9px] text-white/50">
-                      {demo.name.toLowerCase().replace(/[^a-z]+/g, "")}.mx
-                    </span>
-                  </div>
-
-                  {/* fake hero content */}
-                  <div className="relative flex h-32 flex-col justify-between p-4">
-                    <div className="flex items-center justify-between">
-                      <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/10 text-white transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6">
-                        <demo.icon className="h-4 w-4" />
-                      </span>
-                      <span className="rounded-full bg-white/10 px-2 py-1 text-[9px] font-medium uppercase tracking-wider text-white/70">
-                        {demo.category}
+                {/* Imagen de la demo */}
+                <div className="relative h-44 overflow-hidden bg-gradient-to-br from-[var(--color-secondary)] via-[#132038] to-[var(--color-primary)]">
+                  {demo.image ? (
+                    <img
+                      src={demo.image}
+                      alt={`Vista previa de ${demo.name}`}
+                      loading="lazy"
+                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  ) : (
+                    <div className="flex h-full w-full flex-col items-center justify-center gap-2 text-white/70">
+                      <div className="grid-fade absolute inset-0 opacity-25" />
+                      <demo.icon className="relative h-9 w-9 transition-transform duration-300 group-hover:scale-110" />
+                      <span className="relative flex items-center gap-1 text-[10px] uppercase tracking-wider text-white/40">
+                        <ImageOff className="h-3 w-3" />
+                        Sin imagen aún
                       </span>
                     </div>
-                    <div>
-                      <p className="font-display text-sm font-semibold leading-tight text-white sm:text-base">
-                        {demo.headline}
-                      </p>
-                      <div className="mt-2 flex gap-1.5">
-                        <span className="h-1 w-10 rounded-full bg-gradient-to-r from-[var(--color-accent)] to-transparent" />
-                        <span className="h-1 w-5 rounded-full bg-white/20" />
-                      </div>
-                    </div>
-                  </div>
+                  )}
+                  <span className="absolute right-3 top-3 rounded-full bg-black/30 px-2.5 py-1 text-[10px] font-medium uppercase tracking-wider text-white backdrop-blur-sm">
+                    {demo.category}
+                  </span>
                 </div>
 
                 <div className="flex items-center justify-between p-5">
