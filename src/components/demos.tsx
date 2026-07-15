@@ -21,18 +21,31 @@ import { SectionHeading } from "./section-heading";
 import { Reveal } from "./reveal";
 
 const demos = [
-  { name: "Titan Fitness Center", category: "Gym", icon: Dumbbell },
-  { name: "La Parrilla Urbana", category: "Restaurante", icon: UtensilsCrossed },
-  { name: "Centro Médico Vida Sana", category: "Clínica", icon: HeartPulse },
-  { name: "Huellitas Vet", category: "Veterinaria", icon: PawPrint },
-  { name: "Estructura & Obra", category: "Ingeniería", icon: HardHat },
-  { name: "Hotel Meridiano", category: "Hotel", icon: BedDouble },
-  { name: "Sonrisa Dental", category: "Dentista", icon: Sparkles },
-  { name: "Instituto Progreso", category: "Escuela", icon: GraduationCap },
-  { name: "Grupo Constructor MX", category: "Constructora", icon: Building2 },
-  { name: "Casa Nueva Inmobiliaria", category: "Inmobiliaria", icon: Home },
-  { name: "Barbería del Barrio", category: "Barbería", icon: Scissors },
-  { name: "Café Aroma", category: "Cafetería", icon: Coffee },
+  {
+    name: "Titan Fitness Center",
+    category: "Gym",
+    icon: Dumbbell,
+    // TODO: reemplaza con la URL pública real (la que diste es el panel de Netlify, no el sitio).
+    url: "https://titan-fitness-hour.netlify.app/",
+  },
+  {
+    name: "La Parrilla Urbana",
+    category: "Restaurante",
+    icon: UtensilsCrossed,
+    url: "https://parrillaurbana.netlify.app/",
+  },
+  {
+    name: "Centro Médico Vida Sana",
+    category: "Clínica",
+    icon: HeartPulse,
+    url: "https://centro-medico-especialidades.netlify.app/",
+  },
+  {
+    name: "Café Aroma",
+    category: "Cafetería",
+    icon: Coffee,
+    url: "https://cafe-aroma19-06.netlify.app/",
+  },
 ];
 
 const categories = ["Todos", ...Array.from(new Set(demos.map((d) => d.category)))];
@@ -94,13 +107,25 @@ export function Demos() {
                   </h3>
                   <p className="text-xs text-[var(--color-ink-muted)]">{demo.category}</p>
                 </div>
-                <button
-                  aria-label={`Ver demo de ${demo.name}`}
-                  className="flex items-center gap-1 rounded-full border border-[var(--color-border)] px-3 py-1.5 text-xs font-semibold text-[var(--color-ink)] transition-colors group-hover:border-[var(--color-primary)] group-hover:text-[var(--color-primary)]"
-                >
-                  Ver Demo
-                  <ArrowUpRight className="h-3 w-3" />
-                </button>
+                {demo.url ? (
+                  <a
+                    href={demo.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Ver demo de ${demo.name}`}
+                    className="flex items-center gap-1 rounded-full border border-[var(--color-border)] px-3 py-1.5 text-xs font-semibold text-[var(--color-ink)] transition-colors group-hover:border-[var(--color-primary)] group-hover:text-[var(--color-primary)]"
+                  >
+                    Ver Demo
+                    <ArrowUpRight className="h-3 w-3" />
+                  </a>
+                ) : (
+                  <span
+                    aria-label={`Demo de ${demo.name} próximamente`}
+                    className="flex items-center gap-1 rounded-full border border-[var(--color-border)] px-3 py-1.5 text-xs font-semibold text-[var(--color-ink-muted)] opacity-60"
+                  >
+                    Próximamente
+                  </span>
+                )}
               </div>
             </motion.div>
           ))}
