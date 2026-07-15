@@ -30,7 +30,7 @@ const demos = [
     name: "Titan Fitness Center",
     category: "Gym",
     icon: Dumbbell,
-    image: "C:\Users\OFICINA\Documents\PROYECTOS\landinghub\public\demos\titan-fitness.png",
+    image: "public/demos/titan-fitness.png",
     // TODO: reemplaza con la URL pública real (la que diste es el panel de Netlify, no el sitio).
     url: "https://titan-fitness-hour.netlify.app/",
   },
@@ -38,7 +38,7 @@ const demos = [
     name: "La Parrilla Urbana",
     category: "Restaurante",
     icon: UtensilsCrossed,
-    image: "C:\Users\OFICINA\Documents\PROYECTOS\landinghub\public\demos\parrilla-urbana.png",
+    image: "public/demos/parrilla-urbana.png",
     url: "https://parrillaurbana.netlify.app/",
   },
   {
@@ -52,7 +52,7 @@ const demos = [
     name: "Café Aroma",
     category: "Cafetería",
     icon: Coffee,
-    image: "C:\Users\OFICINA\Documents\PROYECTOS\landinghub\public\demos\cafe-aroma.png",
+    image: "public/demos/cafe-aroma.png",
     url: "https://cafe-aroma19-06.netlify.app/",
   },
 ];
