@@ -14,4 +14,14 @@ export const siteConfig = {
   locale: "es_MX",
 };
 
+// -----------------------------------------------------------------------------
+// SECCIONES OPCIONALES
+// Pon "false" para ocultar una sección (por ejemplo, mientras no tengas
+// testimonios reales todavía) y "true" cuando quieras que vuelva a mostrarse.
+// No necesitas tocar ningún otro archivo.
+// -----------------------------------------------------------------------------
+export const featureFlags = {
+  showTestimonials: false,
+};
+
 export type SiteConfig = typeof siteConfig;

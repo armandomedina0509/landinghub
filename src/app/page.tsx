@@ -13,6 +13,7 @@ import { ContactForm } from "@/components/contact-form";
 import { Footer } from "@/components/footer";
 import { WhatsAppButton } from "@/components/whatsapp-button";
 import { ScrollProgress } from "@/components/scroll-progress";
+import { featureFlags } from "@/lib/site-config";
 
 export default function Home() {
   return (
@@ -27,7 +28,7 @@ export default function Home() {
         <Includes />
         <Pricing />
         <Comparison />
-        <Testimonials />
+        {featureFlags.showTestimonials ? <Testimonials /> : null}
         <FAQ />
         <FinalCTA />
         <ContactForm />
