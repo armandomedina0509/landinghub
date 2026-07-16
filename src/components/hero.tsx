@@ -60,8 +60,8 @@ export function Hero() {
   return (
     <section id="top" className="relative overflow-hidden pb-20 pt-36 sm:pt-44">
       <div className="grid-fade pointer-events-none absolute inset-0 -z-10" />
-      <div className="pointer-events-none absolute left-1/2 top-[-10%] -z-10 h-[560px] w-[900px] -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,rgba(37,99,235,0.22),transparent)] blur-2xl dark:bg-[radial-gradient(closest-side,rgba(37,99,235,0.35),transparent)]" />
-      <div className="pointer-events-none absolute right-[-10%] top-[20%] -z-10 h-[380px] w-[380px] rounded-full bg-[radial-gradient(closest-side,rgba(56,189,248,0.22),transparent)] blur-2xl" />
+      <div className="pointer-events-none absolute left-1/2 top-[-10%] -z-10 h-[560px] w-[900px] -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,rgba(29,78,216,0.22),transparent)] blur-2xl dark:bg-[radial-gradient(closest-side,rgba(29,78,216,0.35),transparent)]" />
+      <div className="pointer-events-none absolute right-[-10%] top-[20%] -z-10 h-[380px] w-[380px] rounded-full bg-[radial-gradient(closest-side,rgba(255,107,74,0.22),transparent)] blur-2xl" />
 
       <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-16 px-6 lg:grid-cols-[1.05fr_1fr]">
         {/* Copy */}
@@ -105,7 +105,7 @@ export function Hero() {
           >
             <a
               href="#contacto"
-              className="group inline-flex items-center justify-center gap-2 rounded-full bg-[var(--color-primary)] px-6 py-3.5 text-sm font-semibold text-white shadow-[0_12px_32px_-10px_rgba(37,99,235,0.7)] transition-all hover:scale-[1.02] hover:bg-[var(--color-primary-600)]"
+              className="group inline-flex items-center justify-center gap-2 rounded-full bg-[var(--color-primary)] px-6 py-3.5 text-sm font-semibold text-white shadow-[0_12px_32px_-10px_rgba(29,78,216,0.7)] transition-all hover:scale-[1.02] hover:bg-[var(--color-primary-600)]"
             >
               🚀 Crear mi Página
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />

@@ -3,10 +3,10 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --color-primary: #2563eb;
-  --color-primary-600: #1d4ed8;
+  --color-primary: #1d4ed8;
+  --color-primary-600: #1739b0;
   --color-secondary: #0f172a;
-  --color-accent: #38bdf8;
+  --color-accent: #ff6b4a;
   --color-bg: #ffffff;
   --color-bg-dark: #020617;
 

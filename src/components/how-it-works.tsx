@@ -46,7 +46,7 @@ export function HowItWorks() {
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
             {steps.map((step, i) => (
               <Reveal key={step.title} delay={i * 0.08}>
-                <div className="group relative flex h-full flex-col gap-4 rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6 transition-all hover:-translate-y-1 hover:shadow-[0_20px_50px_-24px_rgba(37,99,235,0.35)]">
+                <div className="group relative flex h-full flex-col gap-4 rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6 transition-all hover:-translate-y-1 hover:shadow-[0_20px_50px_-24px_rgba(29,78,216,0.35)]">
                   <span className="font-mono text-xs text-[var(--color-ink-muted)]">
                     Paso {String(i + 1).padStart(2, "0")}
                   </span>

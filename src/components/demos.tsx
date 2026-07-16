@@ -49,6 +49,62 @@ const demos = [
     url: "https://centro-medico-especialidades.netlify.app/",
   },
   {
+    name: "Huellitas Vet",
+    category: "Veterinaria",
+    icon: PawPrint,
+    image: "",
+    url: "",
+  },
+  {
+    name: "Estructura & Obra",
+    category: "Ingeniería",
+    icon: HardHat,
+    image: "",
+    url: "",
+  },
+  {
+    name: "Hotel Meridiano",
+    category: "Hotel",
+    icon: BedDouble,
+    image: "",
+    url: "",
+  },
+  {
+    name: "Sonrisa Dental",
+    category: "Dentista",
+    icon: Sparkles,
+    image: "",
+    url: "",
+  },
+  {
+    name: "Instituto Progreso",
+    category: "Escuela",
+    icon: GraduationCap,
+    image: "",
+    url: "",
+  },
+  {
+    name: "Grupo Constructor MX",
+    category: "Constructora",
+    icon: Building2,
+    image: "",
+    url: "",
+  },
+  {
+    name: "Casa Nueva Inmobiliaria",
+    category: "Inmobiliaria",
+    icon: Home,
+    image: "",
+    url: "",
+  },
+  {
+    name: "Barbería del Barrio",
+    category: "Barbería",
+    icon: Scissors,
+    image: "",
+    url: "",
+  },
+  {
     name: "Café Aroma",
     category: "Cafetería",
     icon: Coffee,
@@ -102,7 +158,7 @@ export function Demos() {
               transition={{ duration: 0.5, delay: (i % 6) * 0.06, ease: [0.16, 1, 0.3, 1] }}
               className="group"
             >
-              <TiltCard className="overflow-hidden rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] shadow-[0_1px_0_rgba(0,0,0,0.02)] transition-shadow duration-300 hover:shadow-[0_24px_60px_-24px_rgba(37,99,235,0.4)]">
+              <TiltCard className="overflow-hidden rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] shadow-[0_1px_0_rgba(0,0,0,0.02)] transition-shadow duration-300 hover:shadow-[0_24px_60px_-24px_rgba(29,78,216,0.4)]">
                 {/* Imagen de la demo */}
                 <div className="relative h-44 overflow-hidden bg-gradient-to-br from-[var(--color-secondary)] via-[#132038] to-[var(--color-primary)]">
                   {demo.image ? (

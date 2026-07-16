@@ -62,7 +62,7 @@ export function Navbar() {
           <ThemeToggle />
           <a
             href="#contacto"
-            className="rounded-full bg-[var(--color-primary)] px-4 py-2 text-sm font-semibold text-white shadow-[0_8px_24px_-8px_rgba(37,99,235,0.6)] transition-transform hover:scale-[1.03] hover:bg-[var(--color-primary-600)]"
+            className="rounded-full bg-[var(--color-primary)] px-4 py-2 text-sm font-semibold text-white shadow-[0_8px_24px_-8px_rgba(29,78,216,0.6)] transition-transform hover:scale-[1.03] hover:bg-[var(--color-primary-600)]"
           >
             Empieza Hoy
           </a>

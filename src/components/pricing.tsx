@@ -71,8 +71,8 @@ export function Pricing() {
                 className={cn(
                   "group relative flex h-full flex-col rounded-3xl border p-8 transition-all duration-300 hover:-translate-y-1.5",
                   plan.highlight
-                    ? "border-[var(--color-primary)] bg-gradient-to-b from-[var(--color-primary)]/[0.06] to-transparent shadow-[0_30px_70px_-30px_rgba(37,99,235,0.45)] hover:shadow-[0_40px_90px_-30px_rgba(37,99,235,0.55)]"
-                    : "border-[var(--color-border)] bg-[var(--color-surface)] hover:border-[var(--color-primary)]/40 hover:shadow-[0_24px_60px_-30px_rgba(37,99,235,0.3)]"
+                    ? "border-[var(--color-primary)] bg-gradient-to-b from-[var(--color-primary)]/[0.06] to-transparent shadow-[0_30px_70px_-30px_rgba(29,78,216,0.45)] hover:shadow-[0_40px_90px_-30px_rgba(29,78,216,0.55)]"
+                    : "border-[var(--color-border)] bg-[var(--color-surface)] hover:border-[var(--color-primary)]/40 hover:shadow-[0_24px_60px_-30px_rgba(29,78,216,0.3)]"
                 )}
               >
                 {plan.highlight ? (
@@ -117,7 +117,7 @@ export function Pricing() {
                   className={cn(
                     "mt-8 inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-semibold transition-all",
                     plan.highlight
-                      ? "bg-[var(--color-primary)] text-white shadow-[0_12px_32px_-10px_rgba(37,99,235,0.7)] hover:bg-[var(--color-primary-600)]"
+                      ? "bg-[var(--color-primary)] text-white shadow-[0_12px_32px_-10px_rgba(29,78,216,0.7)] hover:bg-[var(--color-primary-600)]"
                       : "border border-[var(--color-border)] text-[var(--color-ink)] hover:border-[var(--color-primary)]"
                   )}
                 >
