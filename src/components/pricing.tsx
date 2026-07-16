@@ -38,18 +38,13 @@ const plans = [
     highlight: true,
   },
   {
-    name: "Growth",
-    price: "1,299",
-    description: "Todo incluido para negocios enfocados en conversión.",
+    name: "Custom",
+    price: "",
+    description: "Tu negocio, tus reglas. Nosotros nos adaptamos a ti.",
     features: [
-      "Todo lo de Business",
-      "Copywriting profesional",
-      "Optimización de conversiones",
-      "Hasta 4 actualizaciones",
-      "Soporte prioritario",
-      "Reporte mensual",
+      "Construye la página perfecta para tu negocio. Agrega únicamente las funcionalidades que necesitas y hazla crecer conforme crece tu empresa.",
     ],
-    cta: "Impulsar mi Negocio",
+    cta: "Porque ningún negocio es igual a otro.",
     highlight: false,
   },
 ];

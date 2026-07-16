@@ -22,6 +22,7 @@ const previews = [
     kicker: "Gimnasio",
     heading: "Entrena sin límites",
     sub: "Membresías desde $499/mes",
+    url: "https://titan-fitness-hour.netlify.app/",
   },
   {
     label: "La Parrilla",
@@ -29,6 +30,7 @@ const previews = [
     kicker: "Restaurante",
     heading: "Sabor que se reserva",
     sub: "Reserva tu mesa en 1 clic",
+    url: "https://parrillaurbana.netlify.app/",
   },
   {
     label: "Vida Sana",
@@ -36,6 +38,7 @@ const previews = [
     kicker: "Clínica",
     heading: "Tu salud, sin filas",
     sub: "Agenda tu cita hoy mismo",
+    url: "https://centro-medico-especialidades.netlify.app/",
   },
   {
     label: "Café Aroma",
@@ -43,6 +46,7 @@ const previews = [
     kicker: "Cafetería",
     heading: "Cada taza, una pausa",
     sub: "Ordena y pasa por tu café",
+    url: "https://cafe-aroma19-06.netlify.app/",
   },
 ];
 
@@ -207,10 +211,15 @@ export function Hero() {
                       {current.heading}
                     </p>
                     <p className="mt-2 text-sm text-white/60">{current.sub}</p>
-                    <div className="mt-5 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-accent)] px-4 py-2 text-xs font-semibold">
+                    <a
+                      href={current.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-5 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-accent)] px-4 py-2 text-xs font-semibold transition-transform hover:scale-105"
+                    >
                       Conocer más
                       <ArrowRight className="h-3 w-3" />
-                    </div>
+                    </a>
                   </div>
 
                   <div className="flex gap-1.5">
